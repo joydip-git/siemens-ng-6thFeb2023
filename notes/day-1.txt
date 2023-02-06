@@ -44,3 +44,41 @@ data types: number, string, boolean, object, function
 undefined, null, NaN
 no strict data typing
 dynamic language
+
+
+JS Exec
+
+
+export class Contact{}
+
+import {  } from './contact'
+
+requirejs.org
+
+a. ES6 (2015) module 
+	 export: export member
+	 import: import { member } from './...'
+
+b. Common JS format:
+	 export: module.exports = { Contact }
+	 import: const {Contact} = require('./...') 
+
+c. Asynchronous Module Definition (AMD)
+	define('',[], function(){
+		class Contact{}
+	})
+
+d. Universal Module Format (UMD)
+
+JS => babel => Vanilla JS
+TS => typescript => Vanilla JS
+
+Ryan Dahl
+
+NPM: Node Package Manager
+
+>npm init --yes
+
+
+
+
