@@ -36,3 +36,11 @@ CSS:
 
 
 browser CSS>outline style>inline
+
+
+JS:
+data types: number, string, boolean, object, function
+
+undefined, null, NaN
+no strict data typing
+dynamic language
