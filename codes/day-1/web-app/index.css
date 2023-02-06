@@ -1,0 +1,33 @@
+/* element selector */
+/* h2 {
+            text-align: center;
+            color: white;
+            background-color: brown;
+        } */
+/* id selector */
+/* #firstHeader {
+            text-align: center;
+            color: white;
+            background-color: brown;
+        } */
+
+/* class selector */
+.header-common-style {
+  text-align: center;
+  color: white;
+  background-color: brown;
+}
+
+.first-header-style {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.another-style {
+  font-family: "Courier New", Courier, monospace;
+}
+ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: lower-roman;
+}

@@ -1,0 +1,38 @@
+1. JavaScript
+2. Node JS
+3. TypeScript
+4. Web application
+		a. tools: transpiler tool
+		b. modules
+				module loader
+				module format
+
+Angular:
+1. benefits and what it is?
+2. features:
+		a. how they run
+		b. component and modules
+		c. files
+		d. data binding
+		e. directives
+		f. pipes
+		g. services and DI
+		h. how to make HTTp requests
+		i. asynchronity in Angular: Observable
+		j. how to pass data between components
+		k. routing
+		l. component lifecycle
+
+
+CSS:
+	a. Inline 
+	b. outline
+			i. element selector
+			ii. id selector
+			iii. class selector
+
+			A. using style tag
+			B. separate CSS file and link the same with HTML file
+
+
+browser CSS>outline style>inline
