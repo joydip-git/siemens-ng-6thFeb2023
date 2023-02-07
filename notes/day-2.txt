@@ -37,5 +37,43 @@
 	b. transpiler tool: (JS->JS: babel, TS->JS: tsc)
 	c. configuration: package.json
 	d. bundler tool: webpack
+
+Angular:
+a. Component: 
+		name.component.ts/html/css
+
+		@Component({
+			selector:'app-name', 
+			templateUrl:'./name.component.html',
+			styleUrls:[]
+		})
+		export class NameComponent{}
+
+b. Directive: name.directive.ts
+		@Directive({})
+		export class NameDirective{}
+
+c. Pipe: name.pipe.ts
+		@Pipe({ name:''})
+		export class NamePipe{}
+
+d. Service: name.service.ts
+		@Injectable()
+		export class NameService{}
+
+e. Module: name.module.ts
+		@NgModule({
+			//register components, pipes, directives
+    		declarations: [],
+			//register your services
+			providers: [],
+			//register modules (child modules, built-in modules)
+			imports: []
+		})
+		export class NameModule{}
+
+@Input(), @Output
+@Inject()
 	
+decorator functions package: @angular/core
 
