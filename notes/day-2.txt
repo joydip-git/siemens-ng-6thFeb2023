@@ -68,7 +68,11 @@ e. Module: name.module.ts
 			//register your services
 			providers: [],
 			//register modules (child modules, built-in modules)
-			imports: []
+			imports: [],
+			//mention the name of components, pipes, directives and modules that you want to export outside this module: a subset of what you declared in declarations and imports
+			exports: [SampleComponent],
+			//which component(s) should be bootstrapped when this module is created
+			bootstrap: [AppComponent]
 		})
 		export class NameModule{}
 

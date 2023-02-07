@@ -6,5 +6,7 @@ import { Component } from "@angular/core";
     styleUrls: ['./sample.component.css']
 })
 export class SampleComponent {
-
+    constructor() {
+        console.log('Sample component created')
+    }
 }

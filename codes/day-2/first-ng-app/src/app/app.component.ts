@@ -5,9 +5,13 @@ import { Component } from "@angular/core";
     template: `
     <h2>
         Welcome to Angular
+        <br>
+        <app-sample></app-sample>
     </h2>
     `
 })
 export class AppComponent {
-
+    constructor() {
+        console.log('App component created')
+    }
 }
