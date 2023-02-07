@@ -1,0 +1,41 @@
+1. HTML, CSS
+2. JavaScript
+		a. Features
+				Basic:
+				i. data types
+				ii. operators
+				iii. control flow statements
+				iv. array: push, shift, unshift, slice, splice, filter, map, sort, find, findIndex etc.
+				Main:
+				i. Functions
+						A. declaration: function name(.....){}
+						B. Expression: var name = function(.....){}
+				ii. Hoisting
+				iii. Exceution cycle: 
+							preaparation phase
+							execution phase
+				iv. callback 
+				v. objects:
+						A. object literal syntax
+						B. constructor function
+						C. class, super, constructor, extends keywords, get and set methods 
+				vi. data in function: 
+						A. local variable (var, let and const)
+						B. object data (this data)
+		b. DOM code in JS
+3. TypeScript:
+			static type checking
+			strict data typing
+			type inferring
+			create your own types: simple types and function types
+
+4. Modules:
+		a. module format: common js, es6, amd, umd etc.
+		b. module loaders: requiresjs, systemjs etc.
+5. Tools:
+	a. App Deve Server: Live Server
+	b. transpiler tool: (JS->JS: babel, TS->JS: tsc)
+	c. configuration: package.json
+	d. bundler tool: webpack
+	
+
