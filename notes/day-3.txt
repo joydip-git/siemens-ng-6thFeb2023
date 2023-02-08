@@ -28,6 +28,7 @@ A. service and DI
 				@Injectable()
 		ii. custom provider
 		iii. maintain state using sevice and RxJS
+		iv. making HTTP requests
 B. Pipe
 C. RxJS: Observable
 D. Component lifecycle events and hooks
@@ -81,3 +82,8 @@ class NameComponent{
 constructor(private s:NameService){
  //angular finds a service with the token name 'NameService', then Injector creates the instance of that service and DI it in the ctor
 }
+
+HTTP requests:
+Built-in service class: HttpClient
+		.get<Album>(url), .put(), .post(url, data), .patch(), .delete()
+
