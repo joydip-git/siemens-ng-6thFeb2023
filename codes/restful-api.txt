@@ -4,7 +4,7 @@ http://localhost:3003/products
 response object:
 {
 		message:"",
-		data:[{},{}]
+		data:[{},{}] or null
 }
 
 2. get a product:
@@ -13,17 +13,17 @@ http://localhost:3003/products/<product-id>
 response object:
 {
 		message:"",
-		data:{}
+		data:{} or null
 }
 
 3. add new product
 http://localhost:3003/products
 
-input: new product object
+input: new product object (JSON)
 response object:
 {
 		message:"",
-		data:[{},{}]
+		data:[{},{}] or null
 }
 
 4. update new product
@@ -33,7 +33,7 @@ input: updated product object
 response object:
 {
 		message:"",
-		data:[{},{}]
+		data:[{},{}] or null
 }
 
 5. delete a product
@@ -42,5 +42,5 @@ http://localhost:3003/products/<product-id>
 response object:
 {
 		message:"",
-		data:[{},{}]
+		data:[{},{}] or null
 }
