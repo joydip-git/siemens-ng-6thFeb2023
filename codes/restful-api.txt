@@ -1,0 +1,46 @@
+1. get all the products:
+http://localhost:3003/products
+
+response object:
+{
+		message:"",
+		data:[{},{}]
+}
+
+2. get a product:
+http://localhost:3003/products/<product-id>
+
+response object:
+{
+		message:"",
+		data:{}
+}
+
+3. add new product
+http://localhost:3003/products
+
+input: new product object
+response object:
+{
+		message:"",
+		data:[{},{}]
+}
+
+4. update new product
+http://localhost:3003/products/<product-id>
+
+input: updated product object
+response object:
+{
+		message:"",
+		data:[{},{}]
+}
+
+5. delete a product
+http://localhost:3003/products/<product-id>
+
+response object:
+{
+		message:"",
+		data:[{},{}]
+}
