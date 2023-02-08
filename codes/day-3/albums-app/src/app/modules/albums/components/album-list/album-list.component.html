@@ -1,5 +1,19 @@
-<ul *ngIf="albumRecords">
-    <li *ngFor="let al of albumRecords">
-        {{ al.title}}
-    </li>
-</ul>
+<ng-template #loading>
+    <span>Loading...please wait</span>
+</ng-template>
+<ng-template #error>
+    <span>{{errorMessage}}</span>
+</ng-template>
+<ng-template #norecord>
+    <span>No record to display</span>
+</ng-template>
+
+<div *ngIf="receivedResponse;else loading">
+    <div *ngIf="errorMessage==='';else error">
+        <ul *ngIf="albumRecords;else norecord">
+            <li *ngFor="let al of albumRecords">
+                {{ al.title}}
+            </li>
+        </ul>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AlbumListComponent } from './components/album-list/album-list.component';
 import { AlbumService } from './services/album.service';
 import { ALBUM_SERVICE_TOKEN, ALBUM_URL, ALBUM_URL_TOKEN, SERVICE_TYPE } from './models/constants';
+import { HttpClientModule } from "@angular/common/http";
 
 // const svc = new AlbumService()
 @NgModule({
@@ -10,7 +11,7 @@ import { ALBUM_SERVICE_TOKEN, ALBUM_URL, ALBUM_URL_TOKEN, SERVICE_TYPE } from '.
     AlbumListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, HttpClientModule
   ],
   //providers: [AlbumService],
   providers: [

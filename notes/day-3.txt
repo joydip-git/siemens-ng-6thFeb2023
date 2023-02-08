@@ -30,7 +30,7 @@ A. service and DI
 		iii. maintain state using sevice and RxJS
 		iv. making HTTP requests
 B. Pipe
-C. RxJS: Observable
+C. RxJS: Observable, observer, modify observable data using rxjs operators
 D. Component lifecycle events and hooks
 E. Passing data between nested components
 
@@ -84,6 +84,22 @@ constructor(private s:NameService){
 }
 
 HTTP requests:
-Built-in service class: HttpClient
-		.get<Album>(url), .put(), .post(url, data), .patch(), .delete()
+Built-in service class: HttpClient (@angular/common/http)
+		.get<Album[]>(url), .put(), .post(url, data), .patch(), .delete()
+
+import HttpClient from '@angular/common/http' package
+ask for DI of HttpClient in you service constructor
+Being a built-in service class, it's provider has been configured in a module (bulit-in): HttpClientModule.
+you need to import the same module in your module class where you have registered your service, from the same @angular/common/http package
+
+event name interface name method name
+X					OnX						ngOnX		
+init			OnInit					  ngOnInit
+destroy	OnDestroy					ngOnDestroy
+
+
+
+
+
+
 
