@@ -1,0 +1,83 @@
+1. client-side framework
+2. SPA
+3. How angular works
+		index.html loaded in the browser
+		main.ts code executed, which pulls the root module, after a context for angular application is created (PlatformRef)
+		Bootstrap component object is created and design is rendered in the index.html 
+4. Angular assets:
+		a. components
+		b. directives
+		c. modules
+		d. services
+		e. pipes
+5. Decorator functions: @Component(), @NgModule()
+6. declaratiions, imports, providers, bootstrap, exports
+7. Angular Feature:
+		binding:
+		a. code=>view (data binding: interpolation {{}} and property binidng [])
+		b. view => code (event binding (event)="method()")
+8. Directives:
+		a. component directive
+		b. structural directive (*ngIf, *ngIfElse, *ngFor, *ngSwitch)
+		c. attribute directive (ngClass, ngStyle)
+
+A. service and DI
+		i. basics
+			  how to create service
+				how to consume service (DI)
+				@Injectable()
+		ii. custom provider
+		iii. maintain state using sevice and RxJS
+B. Pipe
+C. RxJS: Observable
+D. Component lifecycle events and hooks
+E. Passing data between nested components
+
+
+structure:
+	app
+		app.component.ts
+		app.component.html
+		app.component.css
+		app.component.spec.ts
+		app.module.ts
+		modules
+			albums
+				albums.module.ts
+				components
+					album-list
+						album-list.component.ts
+						album-list.component.html
+						album-list.component.css
+				pipes
+						
+				services
+
+				directives
+		
+			core
+
+
+service instance can be depndency injected in 
+		another service
+		a component
+		a directive
+		a pipe
+		a module
+
+service instance can be registered at
+		an asset level
+		a feature module level
+		root module level
+
+service dependency injection happens through
+		a provider
+		an injector
+
+by default a token with the same name as that of the service is generated and used for DI
+providers:[NameService] <= token with the same name as that of the service is registered
+
+class NameComponent{
+constructor(private s:NameService){
+ //angular finds a service with the token name 'NameService', then Injector creates the instance of that service and DI it in the ctor
+}
