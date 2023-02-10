@@ -1,0 +1,53 @@
+<div class="container">
+    <br><br>
+    <ng-template #loadingTemplate>
+        <span>Loading...</span>
+    </ng-template>
+    <ng-template #errorTemplate>
+        <span>{{ errorMessage }}</span>
+    </ng-template>
+    <ng-template #norecordTemplate>
+        <span>No records found</span>
+    </ng-template>
+
+    <app-filter-product (textChanged)="updateFilterText($event)">
+
+    </app-filter-product>
+    <br>
+    <div *ngIf="loadingDone;else loadingTemplate">
+        <div *ngIf="errorMessage==='';else errorTemplate">
+            <table *ngIf="allProducts && allProducts.length>0;else norecordTemplate" class="table table-hover">
+                <thead class="theadStyle">
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody class="table-dark">
+                    <tr *ngFor="let p of (allProducts|productFilter:filterText)">
+                        <td>
+                            <div [routerLink]="['/products/view',p.productId]">
+                                <img class="imgStyle" [src]="p.imageUrl" alt="NA" [title]="p.productName">
+                            </div>
+                        </td>
+                        <td>
+                            {{p.productName|uppercase}}
+                        </td>
+                        <td>
+                            {{p.price|currency:'INR'}}
+                        </td>
+                        <td>
+                            {{p.starRating}}
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

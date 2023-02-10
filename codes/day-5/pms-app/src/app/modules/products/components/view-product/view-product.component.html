@@ -1,0 +1,63 @@
+<ng-template #spinner>
+    <span>Loading...</span>
+</ng-template>
+<ng-template #alternate>
+    <span>No records found...</span>
+</ng-template>
+<div *ngIf="errorMessage!==''">
+    <span>{{errorMessage}}</span>
+</div>
+<div *ngIf="loadingDone; else spinner">
+    <br><br>
+    <div class="container" *ngIf="product;else alternate">
+        <div class="panel panel-primary">
+            <div class="panel-heading fontSize">
+                Detail: &nbsp;{{product.productName}}
+                <a [routerLink]="['/products/edit',product.productId]" class="btn btn-primary editStyle">
+                    Edit
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3">Name:&nbsp;</div>
+                        <div class="col-md-6">{{product.productName}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">Code:&nbsp;</div>
+                        <div class="col-md-6">{{product.productCode}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">Description:&nbsp;</div>
+                        <div class="col-md-6">{{product.description}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">Availability:&nbsp;</div>
+                        <div class="col-md-6">{{product.releaseDate}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">Price:&nbsp;</div>
+                        <div class="col-md-6">{{product.price|currency:'INR'}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">Rating:&nbsp;</div>
+                        <div class="col-md-6">
+                            {{product.starRating}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img class="center-block img-responsive" [src]="product.imageUrl" [title]="product.productName"
+                        alt="NA">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <button type="button" class="btn btn-default" (click)="navigateBack()">
+                <i class="bi bi-arrow-left-circle-fill"></i>Back
+            </button>
+        </footer>
+    </div>
+</div>
