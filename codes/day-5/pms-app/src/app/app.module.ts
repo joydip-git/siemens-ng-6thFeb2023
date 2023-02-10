@@ -7,6 +7,7 @@ import { ProductsModule } from './modules/products/products.module';
 import { HomeComponent } from './modules/common-features/components/home/home.component';
 import { DashboardComponent } from './modules/common-features/components/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './modules/common-features/components/page-not-found/page-not-found.component';
+import { CoreModule } from './modules/core/core.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PageNotFoundComponent } from './modules/common-features/components/page
   imports: [
     BrowserModule,
     ProductsModule,
+    CoreModule,
     AppRoutingModule
   ],
   providers: [],
