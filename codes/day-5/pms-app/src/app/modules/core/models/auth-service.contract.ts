@@ -6,4 +6,7 @@ export interface IAuthService {
     authenticate(user: User): Observable<ApiResponse<string>>;
     register(user: User): Observable<ApiResponse<User>>;
     saveToken(token: string): void;
+    getToken(): string;
+    removeToken(): void;
+    //tokenObservable: Observable<string>;
 }

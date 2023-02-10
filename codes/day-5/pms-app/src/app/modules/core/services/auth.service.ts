@@ -9,7 +9,7 @@ import { User } from "../models/user.model";
 @Injectable()
 export class AuthService implements IAuthService {
     private tokenSubject = new BehaviorSubject<string>('')
-    tokenObservable = this.tokenSubject.asObservable()
+    //tokenObservable = this.tokenSubject.asObservable()
 
     constructor(
         @Inject(AUTH_API_URL_TOKEN) private autApiUrl: string,
@@ -24,5 +24,11 @@ export class AuthService implements IAuthService {
     }
     saveToken(token: string): void {
         this.tokenSubject.next(token)
+    }
+    getToken() {
+        return this.tokenSubject.getValue()
+    }
+    removeToken(): void {
+        this.tokenSubject.next('')
     }
 }
