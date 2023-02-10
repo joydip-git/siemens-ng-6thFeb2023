@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './modules/common-features/components/page
 import { CoreModule } from './modules/core/core.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppInterceptorService } from './modules/common-features/components/services/app-interceptor.service';
+import { AuthGuard } from './modules/core/services/auth.guard';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AppInterceptorService } from './modules/common-features/components/serv
     HttpClientModule
   ],
   providers: [
+    AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AppInterceptorService,

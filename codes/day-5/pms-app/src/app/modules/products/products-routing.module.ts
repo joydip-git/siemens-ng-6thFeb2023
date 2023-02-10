@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../core/services/auth.guard';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
@@ -7,20 +8,25 @@ import { ViewProductComponent } from './components/view-product/view-product.com
 
 const productRoutes: Routes = [{
     path: 'products',
-    component: ProductListComponent
-}, {
-    path: 'products/add',
-    component: AddProductComponent
-}, {
-    path: 'products/view/:id',
-    component: ViewProductComponent
-}, {
-    path: 'products/edit/:id',
-    component: EditProductComponent
+    canActivate: [AuthGuard],
+    children: [
+        {
+            path: '',
+            component: ProductListComponent
+        }, {
+            path: 'add',
+            component: AddProductComponent
+        }, {
+            path: 'view/:id',
+            component: ViewProductComponent
+        }, {
+            path: 'edit/:id',
+            component: EditProductComponent
+        }]
 }];
 
 @NgModule({
-    imports: [RouterModule.forRoot(productRoutes)],
+    imports: [RouterModule.forChild(productRoutes)],
     exports: [RouterModule]
 })
 export class ProductsRoutingModule { }
