@@ -39,3 +39,25 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3003/products/6
+
+###
+POST http://127.0.0.1:3003/auth/register
+Content-Type: application/json
+
+{
+        "username":"joy1@gmail.com",
+        "password":"Joy1@123"
+}
+
+###
+POST http://127.0.0.1:3003/auth/authenticate
+Content-Type: application/json
+
+{
+        "username":"jeevan@gmail.com",
+        "password":"Jeevan@123"
+}
+
+###
+GET http://localhost:3003/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwMjY4MTYsImV4cCI6MTY3NjAyNzExNn0.wDsy1Z30JICd7WyDdkTKZNVExCpp1mBrltavoyHf8Pg

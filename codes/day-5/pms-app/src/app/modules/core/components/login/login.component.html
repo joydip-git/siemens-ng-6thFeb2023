@@ -42,6 +42,11 @@
                     </button>
                 </div>
             </form>
+            <br>
+            <br>
+            <div *ngIf="errorInfo !==''" class="text-muted">
+                Error:&nbsp; {{errorInfo}}
+            </div>
         </div>
     </div>
 </div>
