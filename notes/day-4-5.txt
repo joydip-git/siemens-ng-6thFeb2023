@@ -1,0 +1,12 @@
+Forms in Angilar: 
+	Template-driven forms: 
+		control everything from angular design
+	Reactive forms:
+		control everything from code
+
+1. FormsModule: (Template-driven and Reactive Forms)
+		directives: ngForm, ngModel etc.
+		classes: FormGroup, FormControl etc.
+
+2. ReactiveFormsModule: (Reactive Forms)
+		directives: formGroupName, formGroup, formControlName, formControl etc.
