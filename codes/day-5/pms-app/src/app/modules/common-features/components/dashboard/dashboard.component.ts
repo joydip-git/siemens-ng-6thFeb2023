@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { IAuthService } from 'src/app/modules/core/models/auth-service.contract';
 
 @Component({
   selector: 'app-dashboard',

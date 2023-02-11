@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AUTH_SERVICE_TOKEN } from 'src/app/constants/constants';
-import { IAuthService } from '../models/auth-service.contract';
+import { IAuthService } from '../../../core/models/auth-service.contract';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
@@ -18,7 +18,17 @@ export class AuthGuard implements CanActivate {
     if (token !== '') {
       return true;
     } else {
-      this.router.navigate(['/login'])
+      //this line has been added to redirect the user to the login view along with the originally requested URL appeneded using query string (such as: http://localhost:4200/login?returnUrl=products)
+      //RouterStateSnapshot provides you which URL was originally requested (use 'url' property of that object)
+      //navigate() method accepts an object as 2nd argument, where you can use the queryParams property to attach the originally requested URL
+      this.router.navigate(
+        ['/login'],
+        {
+          queryParams: {
+            returnUrl: state.url
+          }
+        }
+      )
       return false;
     }
   }

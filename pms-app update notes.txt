@@ -1,0 +1,11 @@
+Hi guys, I have updated the AuthGurad and LoginComponent code.
+Th idea is that, if the user is not yet logged in, the I shall redirect the user to the login view by attaching a query parameter by the name 'returnUrl' with the originally requested url as value of that parameter. After successful login, user will be redirected to that originally requested view.
+such as: 
+originally requested url: http://localhost:4200/products
+if user is not logged in yet, then it will be converted to 
+http://localhost:4200/login?returnUrl=%2Fproducts
+
+In login component ngOnInit() has been implemented to extract the returnUrl query parameter
+in submit() method I have redirected the user to originally requested URl if returnUrl parameter exists in the login url
+in AuthGuard, I have extracted the originally requested url from RouterStateSnapshot object (state.url) and attached the same as query parameter in the login url, while redirecting the user to the login view, in case user is not yet authenticated
+also, the auth.guard.ts file has been placed in the modules/common-features/services folder
